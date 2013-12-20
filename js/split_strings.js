@@ -9,10 +9,8 @@
 //
 
 function solution(str){
-    c = str.split("");
-    d = c.map(function(item,i){if(i%2 === 0){return c.slice(i,i+2).join("")}}).compact();
-    var last = d.last();
-    if (last.length === 1){last += "_"};
-    d.pop();
-    d.push(last);
-};
+  var c = str.split(""),
+  r = [];
+  for(j=0;j<c.length;j+=2){v = c[j+1] || "_";r.push(c[j]+v);}
+  return r;
+}
