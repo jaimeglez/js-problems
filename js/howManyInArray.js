@@ -8,7 +8,5 @@
 
 
 Array.prototype.numberOfOccurrences = function(num) {
-  var oc = 0;
-  this.map(function(item){if(item===num){oc+=1;}});
-  return oc;
+    return this.filter(function(item){return item==num;}).length;
 }
