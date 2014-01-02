@@ -7,9 +7,8 @@
 // arr.numberOfOccurrences("a") === 0;
 
 
-Array.prototype.numberOfOccurrences = function() {
-  var par = arguments[0],
-  sum = 0;
-  this.map(function(item){if (item===par){sum+=1;}});
-  return sum;
+Array.prototype.numberOfOccurrences = function(num) {
+  var oc = 0;
+  this.map(function(item){if(item===num){oc+=1;}});
+  return oc;
 }
