@@ -17,8 +17,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 function searchNames( logins ){
-  var r = [];
-  logins.filter(function(item,i){if (/^\.|\.$/.test(item) === true){r.push(logins[i+1])}});
-  return r;
+  return logins.filter(function(item,i){if (/^\.|\.$/.test(logins[i-1]) === true && i>0){return item}});
 }
 
