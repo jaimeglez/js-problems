@@ -9,13 +9,8 @@
 //
 
 function fibonacci(n) {
-  //return fibonacci array of n elements
-  var fib  = function(m){
-    return m<2 ? m : fib(m-1) + fib(m-2)
-  };
-  var serie = [];
-  for (var i = 0; i < n; i += 1) {
-      serie.push(fib(i));
-  }
+  var serie = [],
+  fib  = function(m){ return m<2 ? m : fib(m-1) + fib(m-2) };
+  for (var i = 0; i < n; i += 1) { serie.push(fib(i)); }
   return serie;
 }
