@@ -31,3 +31,16 @@ Math.floor = function(number) {
   var m = number.toString().match(/(\d+)([\.]*)([\d]|)/);
   return parseInt(m[1]);
 };
+
+//best solution
+Math.round = function(number) {
+  return (number+0.5|0)
+};
+
+Math.ceil = function(number) {
+  return ((number|0) < number) ? (number|0)+1 : number|0
+};
+
+Math.floor = function(number) {
+  return number|0; // This line do a comparison(addition on binary) which truncate the result by adding 0
+};
