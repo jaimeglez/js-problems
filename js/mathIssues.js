@@ -20,7 +20,7 @@ Math.round = function(number) {
 
 Math.ceil = function(number) {
   var m = number.toString().match(/(\d+)([\.]*)([\d]*|)/);
-  if (parseInt(m[3]) > 0){
+  if (parseInt(m[3])){
     return parseInt(m[1])+1;
   }else{
     return parseInt(m[1]);
