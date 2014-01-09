@@ -17,3 +17,9 @@
 // findNumber( [2,3,4] ) => 1
 
 // findNumber( [13,11,10,3,2,1,4,5,6,9,7,8] ) => 12
+//
+// return the missing number!
+function findNumber(array) {
+  array.sort(function(a,b){return a-b});
+  for (var i=0; i < array.length; i++){if (array[i] !== i+1) return i+1}
+}
